@@ -1,4 +1,4 @@
-name: "Yay internet!"
+name: "Danni Cao"
 output_dir: "."
 navbar:
   title: "Home"
@@ -6,8 +6,10 @@ navbar:
     - text: "About"
       href: about.html
     - icon: fa-envelope fa-lg
-      href: mailto:<you@youremail.com>
+      href: mailto:<dac4006@med.cornell.edu>
     - icon: fa-github fa-lg
-      href: http://github.com/<YOUR_GH_NAME>/
+      href: http://github.com/DanniCao1997/
+    - icon: fa-github fa-lg
+      href: http://twitter.com/CaoDanni/      
 output:
   html_document
