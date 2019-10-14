@@ -9,7 +9,7 @@ navbar:
       href: mailto:<dac4006@med.cornell.edu>
     - icon: fa-github fa-lg
       href: http://github.com/DanniCao1997/
-    - icon: fa-github fa-lg
+    - icon: fa-twitter fa-lg
       href: http://twitter.com/CaoDanni/      
 output:
   html_document
