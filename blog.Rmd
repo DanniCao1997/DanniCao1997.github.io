@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ##R Blog about writing function
-If you are going to use R, the most important part is to apply function in R or writing R fucntion yourself, which will save you time effectively.
+If you are going to use R, the most important part is to apply function in R or writing R function yourself, which will save you time effectively.
 
 &nbsp;
 
@@ -26,7 +26,7 @@ There are three parts in R function, which are body, formals and environment. He
 
 ###Parameter Allocation
 
-In R, the parameter in use will be allocated as ordered. Besides, the parameter can also been designed by the names of parameters.Then, if there is any parameter left without name, they will be arranged as ordered. When applying the function, they will be assigned values as ordered.
+In R, the parameter in use will be allocated as ordered. Besides, the parameter can also been designed by the names of parameters. Then, if there is any parameter left without name, they will be arranged as ordered. When applying the function, they will be assigned values as ordered.
 
 ```{r}
 myfunction1 <- function(a, b, c){
@@ -34,16 +34,16 @@ myfunction1 <- function(a, b, c){
   print(b)
   print(c)
 }   # Write a simple function just printing the input.
-myfunction1(1, 2, b = 3)   # Apply the fucntion written.
+myfunction1(1, 2, b = 3)   # Apply the function written.
 ```
 
-R funtion can also assign the default value by stating the parameter equal to some value directly in the paramater setting bracket. Note that the parameter with default will also be assigned value as ordered. The assignment will not skip the parameter with default.
+R function can also assign the default value by stating the parameter equal to some value directly in the parameter setting bracket. Note that the parameter with default will also be assigned value as ordered. The assignment will not skip the parameter with default.
 
 ```{r}
 myfunction2 <- function(a, b = 3) { 
   print(a) 
   print(b) 
-}    # Set the default to paramater b. And print the two paramaters.
+}    # Set the default to parameter b. And print the two parameters.
 myfunction2(1)     # Apply the function written.
 ```
 
@@ -52,7 +52,7 @@ Here, we could use function missing( &emsp; ) to determine whether there is any 
 ```{r}
 myfunc3 <- function(a, b) { 
   c(missing(a), missing(b)) 
-}   # Write the funtion to determine the missing values.
+}   # Write the function to determine the missing values.
 myfunc3(b = 1)     # Apply the function written.
 ```
 
@@ -69,7 +69,7 @@ myfunc4(a = 1, b = 2)     # Apply the function written.
 
 Return function is a very important part in writing function. If you don't use the return( &emsp; ), the function will return the result of the last command. Note that the result returned could be a value, a list, a function and so on.
 
-If you don't want the returning values been printed, you couls use function invisible( &emsp; ). But you can still print it by putting it in a bracket.
+If you don't want the returning values been printed, you could use function invisible( &emsp; ). But you can still print it by putting it in a bracket.
 
 ```{r}
 (invisible(2)) # Use () to reshow the value concealed by invisible()
@@ -84,10 +84,10 @@ There are two special kinds of function, which are infix function and replacemen
 
 &nbsp;
 
-#### Infix funciton
+#### Infix function
 
-We will usually use a function in the format as "Funciton" "(Parameter)". However, there do exist some function put in the middle of two parameter. Here, you need to add the "%" before and after your infix function. Note that you need to use 
-quotation marks to highlight the name of fucntion if you want to use the infix function as the conventional format.
+We will usually use a function in the format as "Function" "(Parameter)". However, there do exist some function put in the middle of two parameter. Here, you need to add the "%" before and after your infix function. Note that you need to use 
+quotation marks to highlight the name of function if you want to use the infix function as the conventional format.
 
 ```{r}
 "%+%" <- function(a, b) {
@@ -99,7 +99,7 @@ quotation marks to highlight the name of fucntion if you want to use the infix f
 
 &nbsp;
 
-#### Replacement funciton
+#### Replacement function
 
 There is a special naming format for replacement function, "xxx<-", used to replace the content directly like dim( &emsp; ) or names( &emsp; ). Basically, this is just to add a new parameter in function.
 
@@ -115,6 +115,7 @@ x           # replace the second element of x
 
 &nbsp;
 &nbsp;
+
 This is all about this blog. But there is still more that we can explore about writing and applying function in the future.
 
 
