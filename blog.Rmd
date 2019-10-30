@@ -16,9 +16,13 @@ knitr::opts_chunk$set(echo = TRUE)
 ##R Blog about writing function
 If you are going to use R, the most important part is to apply function in R or writing R fucntion yourself, which will save you time effectively.
 
+&nbsp;
+
 ###Function Structure
 
 There are three parts in R function, which are body, formals and environment. Here you can use the function body( &emsp; ), formals( &emsp; ), environment( &emsp; ) to see the different parts in the function. 
+
+&nbsp;
 
 ###Parameter Allocation
 
@@ -59,6 +63,8 @@ myfunc4 <- function(...) { names(list(...)) }
 myfunc4(a = 1, b = 2)     # Apply the function written.
 ```
 
+&nbsp;
+
 ###Return Function:
 
 Return function is a very important part in writing function. If you don't use the return( &emsp; ), the function will return the result of the last command. Note that the result returned could be a value, a list, a function and so on.
@@ -70,9 +76,13 @@ If you don't want the returning values been printed, you couls use function invi
 (a <- 2)      # Show value of a
 ```
 
+&nbsp;
+
 ###Special Function:
 
 There are two special kinds of function, which are infix function and replacement funciton.
+
+&nbsp;
 
 #### Infix funciton
 
@@ -86,6 +96,8 @@ quotation marks to highlight the name of fucntion if you want to use the infix f
 "new" %+% "string" 
 `%+%`("new", " string")  # Use the conventional format of infix function
 ```
+
+&nbsp;
 
 #### Replacement funciton
 
@@ -101,6 +113,8 @@ myfunc5(x) <- 10  #Apply the function
 x           # replace the second element of x
 ```
 
+&nbsp;
+&nbsp;
 This is all about this blog. But there is still more that we can explore about writing and applying function in the future.
 
 
