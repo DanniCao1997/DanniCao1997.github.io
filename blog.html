@@ -389,7 +389,7 @@ div.tocify {
 <p>If you are going to use R, the most important part is to apply function in R or writing R fucntion yourself, which will save you time effectively.</p>
 <div id="function-structure" class="section level3">
 <h3>Function Structure</h3>
-<p>There are three parts in R function, which are body, formals and environment. Here you can use the function body(), formals(), environment() to see the different parts in the function.</p>
+<p>There are three parts in R function, which are body, formals and environment. Here you can use the function body(   ), formals(   ), environment(   ) to see the different parts in the function.</p>
 </div>
 <div id="parameter-allocation" class="section level3">
 <h3>Parameter Allocation</h3>
@@ -411,7 +411,7 @@ myfunction1(1, 2, b = 3)   # Apply the fucntion written.</code></pre>
 myfunction2(1)     # Apply the function written.</code></pre>
 <pre><code>## [1] 1
 ## [1] 3</code></pre>
-<p>Here, we could use function missing() to determine whether there is any parameter missed.</p>
+<p>Here, we could use function missing(   ) to determine whether there is any parameter missed.</p>
 <pre class="r"><code>myfunc3 &lt;- function(a, b) { 
   c(missing(a), missing(b)) 
 }   # Write the funtion to determine the missing values.
@@ -424,8 +424,8 @@ myfunc4(a = 1, b = 2)     # Apply the function written.</code></pre>
 </div>
 <div id="return-function" class="section level3">
 <h3>Return Function:</h3>
-<p>Return function is a very important part in writing function. If you don’t use the return(), the function will return the result of the last command. Note that the result returned could be a value, a list, a function and so on.</p>
-<p>If you don’t want the returning values been printed, you couls use function invisible(). But you can still print it by putting it in a bracket.</p>
+<p>Return function is a very important part in writing function. If you don’t use the return(   ), the function will return the result of the last command. Note that the result returned could be a value, a list, a function and so on.</p>
+<p>If you don’t want the returning values been printed, you couls use function invisible(   ). But you can still print it by putting it in a bracket.</p>
 <pre class="r"><code>(invisible(2)) # Use () to reshow the value concealed by invisible()</code></pre>
 <pre><code>## [1] 2</code></pre>
 <pre class="r"><code>(a &lt;- 2)      # Show value of a</code></pre>
@@ -447,7 +447,7 @@ myfunc4(a = 1, b = 2)     # Apply the function written.</code></pre>
 </div>
 <div id="replacement-funciton" class="section level4">
 <h4>Replacement funciton</h4>
-<p>There is a special naming format for replacement function, “xxx&lt;-”, used to replace the content directly like dim() or names(). Basically, this is just to add a new parameter in function.</p>
+<p>There is a special naming format for replacement function, “xxx&lt;-”, used to replace the content directly like dim(   ) or names(   ). Basically, this is just to add a new parameter in function.</p>
 <pre class="r"><code>&quot;myfunc5&lt;-&quot; &lt;- function(x, value) {
     x[2] &lt;- value
     x

@@ -9,9 +9,12 @@ title: "Danni Cao "
 
 I am a master student majoring in  Biostatistics and Data Science in the <a href="https://hpr.weill.cornell.edu" target="_blank">Healthcare Policy and Research Department </a> at <a href="https://weill.cornell.edu" target="_blank"> Weill Cornell Medicine</a> now. 
 
-I have graduated from <a href="https://www.swufe.edu.cn" target="_blank">Southwestern University of Finance and Economics</a> to get my bachelor's degree. Then I spent one year at <a href="https://uwaterloo.ca" target="_blank"> University of Waterloo </a> in Canada as an exchange student. 
+I have graduated from <a href="https://www.swufe.edu.cn" target="_blank">Southwestern University of Finance and Economics</a> to get my bachelor's degree majoring in Mathematical Statistics. Then I spent one year at <a href="https://uwaterloo.ca" target="_blank"> University of Waterloo </a> in Canada as an exchange student majoring in Statistics. 
 
-I have ever did some research about Artificial Intelligence using GANs to generate music. And the article has been submitted. 
+I have ever did some research about Artificial Intelligence using GANs to generate music. And the article has been submitted to <a href="https://2019.ieeeicassp.org" target="_blank">
+icassp </a>. 
+
+Moreover, I have also done some internships. I have done internship in <a href="https://www2.deloitte.com/cn/zh.html" target="_blank"> Deloitte </a> under the Risk Asvisory. Besides I have worked as intern in Department of Statistics and bank.
 
 My resume is available  <a href="https://dannicao1997.github.io/Resume_DanniCao.pdf" target="_blank">here</a>.
 
