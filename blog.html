@@ -10,9 +10,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Danni Cao" />
 
 
-<title>Danni Cao</title>
+<title>Blog</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,6 +21,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -250,6 +254,63 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -257,6 +318,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -306,20 +377,94 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Danni Cao</h1>
+<h1 class="title toc-ignore">Blog</h1>
+<h4 class="author">Danni Cao</h4>
+<h4 class="date">2019/10/29</h4>
 
 </div>
 
 
-<p><hr()></p>
-<p><img src="images/for_github.JPG" style="width:35%; border:10px solid; margin-right: 20px" align="left"></p>
-<p>I am a master student majoring in Biostatistics and Data Science in the <a href="https://hpr.weill.cornell.edu" target="_blank">Healthcare Policy and Research Department </a> at <a href="https://weill.cornell.edu" target="_blank"> Weill Cornell Medicine</a> now.</p>
-<p>I have graduated from <a href="https://www.swufe.edu.cn" target="_blank">Southwestern University of Finance and Economics</a> to get my bachelor’s degree. Then I spent one year at <a href="https://uwaterloo.ca" target="_blank"> University of Waterloo </a> in Canada as an exchange student.</p>
-<p>I have ever did some research about Artificial Intelligence using GANs to generate music. And the article has been submitted.</p>
-<p>My resume is available <a href="https://dannicao1997.github.io/Resume_DanniCao.pdf" target="_blank">here</a>.</p>
+<div id="r-blog-about-writing-function" class="section level2">
+<h2>R Blog about writing function</h2>
+<p>If you are going to use R, the most important part is to apply function in R or writing R fucntion yourself, which will save you time effectively.</p>
+<div id="function-structure" class="section level3">
+<h3>Function Structure</h3>
+<p>There are three parts in R function, which are body, formals and environment. Here you can use the function body(), formals(), environment() to see the different parts in the function.</p>
+</div>
+<div id="parameter-allocation" class="section level3">
+<h3>Parameter Allocation</h3>
+<p>In R, the parameter in use will be allocated as ordered. Besides, the parameter can also been designed by the names of parameters.Then, if there is any parameter left without name, they will be arranged as ordered. When applying the function, they will be assigned values as ordered.</p>
+<pre class="r"><code>myfunction1 &lt;- function(a, b, c){
+  print(a)
+  print(b)
+  print(c)
+}   # Write a simple function just printing the input.
+myfunction1(1, 2, b = 3)   # Apply the fucntion written.</code></pre>
+<pre><code>## [1] 1
+## [1] 3
+## [1] 2</code></pre>
+<p>R funtion can also assign the default value by stating the parameter equal to some value directly in the paramater setting bracket. Note that the parameter with default will also be assigned value as ordered. The assignment will not skip the parameter with default.</p>
+<pre class="r"><code>myfunction2 &lt;- function(a, b = 3) { 
+  print(a) 
+  print(b) 
+}    # Set the default to paramater b. And print the two paramaters.
+myfunction2(1)     # Apply the function written.</code></pre>
+<pre><code>## [1] 1
+## [1] 3</code></pre>
+<p>Here, we could use function missing() to determine whether there is any parameter missed.</p>
+<pre class="r"><code>myfunc3 &lt;- function(a, b) { 
+  c(missing(a), missing(b)) 
+}   # Write the funtion to determine the missing values.
+myfunc3(b = 1)     # Apply the function written.</code></pre>
+<pre><code>## [1]  TRUE FALSE</code></pre>
+<p>Here we need to mention the … parameter. This parameter could be used to match any unmatched parameter and also easily transfer to any other function. However, this parameter won’t check any correctness.</p>
+<pre class="r"><code>myfunc4 &lt;- function(...) { names(list(...)) }
+myfunc4(a = 1, b = 2)     # Apply the function written.</code></pre>
+<pre><code>## [1] &quot;a&quot; &quot;b&quot;</code></pre>
+</div>
+<div id="return-function" class="section level3">
+<h3>Return Function:</h3>
+<p>Return function is a very important part in writing function. If you don’t use the return(), the function will return the result of the last command. Note that the result returned could be a value, a list, a function and so on.</p>
+<p>If you don’t want the returning values been printed, you couls use function invisible(). But you can still print it by putting it in a bracket.</p>
+<pre class="r"><code>(invisible(2)) # Use () to reshow the value concealed by invisible()</code></pre>
+<pre><code>## [1] 2</code></pre>
+<pre class="r"><code>(a &lt;- 2)      # Show value of a</code></pre>
+<pre><code>## [1] 2</code></pre>
+</div>
+<div id="special-function" class="section level3">
+<h3>Special Function:</h3>
+<p>There are two special kinds of function, which are infix function and replacement funciton.</p>
+<div id="infix-funciton" class="section level4">
+<h4>Infix funciton</h4>
+<p>We will usually use a function in the format as “Funciton” “(Parameter)”. However, there do exist some function put in the middle of two parameter. Here, you need to add the “%” before and after your infix function. Note that you need to use quotation marks to highlight the name of fucntion if you want to use the infix function as the conventional format.</p>
+<pre class="r"><code>&quot;%+%&quot; &lt;- function(a, b) {
+  paste(a, b, sep = &quot;&quot;)
+}           # Write a infix function.
+&quot;new&quot; %+% &quot;string&quot; </code></pre>
+<pre><code>## [1] &quot;newstring&quot;</code></pre>
+<pre class="r"><code>`%+%`(&quot;new&quot;, &quot; string&quot;)  # Use the conventional format of infix function</code></pre>
+<pre><code>## [1] &quot;new string&quot;</code></pre>
+</div>
+<div id="replacement-funciton" class="section level4">
+<h4>Replacement funciton</h4>
+<p>There is a special naming format for replacement function, “xxx&lt;-”, used to replace the content directly like dim() or names(). Basically, this is just to add a new parameter in function.</p>
+<pre class="r"><code>&quot;myfunc5&lt;-&quot; &lt;- function(x, value) {
+    x[2] &lt;- value
+    x
+    }        # Write a replacement function
+x &lt;- 1:5
+myfunc5(x) &lt;- 10  #Apply the function
+x           # replace the second element of x</code></pre>
+<pre><code>## [1]  1 10  3  4  5</code></pre>
+<p>This is all about this blog. But there is still more that we can explore about writing and applying function in the future.</p>
+</div>
+</div>
+</div>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -352,6 +497,32 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
