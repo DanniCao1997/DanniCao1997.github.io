@@ -14,11 +14,15 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ##R Blog about writing function
-If you are going to use R, the most important part is to apply function in R or writing R function yourself, which will save you time effectively.
+If you are going to use R, the most important part is to apply function in R or writing R function yourself, which will save your time effectively, since there will be many occasions that you need to do some repeating work. If you could write a function properly, it will be much easier than just using the basic commands.
 
 &nbsp;
 
 ###Function Structure
+
+First, we will introduce the structure of a function.
+
+&nbsp;
 
 There are three parts in R function, which are body, formals and environment. Here you can use the function body( &emsp; ), formals( &emsp; ), environment( &emsp; ) to see the different parts in the function. 
 
@@ -37,7 +41,7 @@ myfunction1 <- function(a, b, c){
 myfunction1(1, 2, b = 3)   # Apply the function written.
 ```
 
-R function can also assign the default value by stating the parameter equal to some value directly in the parameter setting bracket. Note that the parameter with default will also be assigned value as ordered. The assignment will not skip the parameter with default.
+R function can also assign the default value by stating the parameter equals to some value directly in the parameter setting bracket. Note that the parameter with default will also be assigned value as ordered. The assignment will not skip the parameter with default.
 
 ```{r}
 myfunction2 <- function(a, b = 3) { 
@@ -56,7 +60,7 @@ myfunc3 <- function(a, b) {
 myfunc3(b = 1)     # Apply the function written.
 ```
 
-Here we need to mention the ... parameter. This parameter could be used to match any unmatched parameter and also easily transfer to any other function. However, this parameter won't check any correctness.
+Here we need to mention the ... parameter. This parameter could be used to match any unmatched parameter and also easily transfer to any other function. However, this parameter won't check whether it is correct.
 
 ```{r}
 myfunc4 <- function(...) { names(list(...)) }
@@ -86,7 +90,7 @@ There are two special kinds of function, which are infix function and replacemen
 
 #### Infix function
 
-We will usually use a function in the format as "Function" "(Parameter)". However, there do exist some function put in the middle of two parameter. Here, you need to add the "%" before and after your infix function. Note that you need to use 
+We will usually use a function in the format as "Function" "(Parameter)". However, there do exist some functions being put in the middle of two parameter. Here, you need to add the "%" before and after your infix function. Note that you need to use 
 quotation marks to highlight the name of function if you want to use the infix function as the conventional format.
 
 ```{r}
@@ -116,7 +120,7 @@ x           # replace the second element of x
 &nbsp;
 &nbsp;
 
-This is all about this blog. But there is still more that we can explore about writing and applying function in the future.
+This is all about this blog. But there is still more that we can explore about writing and applying function in the future. The examples and usages shown in this blog is all the basic knowledge about how to write a function. We could make the functions more complicated, like putting other functions into it or putting some "for" or "while" loops into functions to accomplish the more complicated work.
 
 
 

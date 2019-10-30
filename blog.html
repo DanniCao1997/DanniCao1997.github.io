@@ -386,10 +386,12 @@ div.tocify {
 
 <div id="r-blog-about-writing-function" class="section level2">
 <h2>R Blog about writing function</h2>
-<p>If you are going to use R, the most important part is to apply function in R or writing R function yourself, which will save you time effectively.</p>
+<p>If you are going to use R, the most important part is to apply function in R or writing R function yourself, which will save your time effectively, since there will be many occasions that you need to do some repeating work. If you could write a function properly, it will be much easier than just using the basic commands.</p>
 <p> </p>
 <div id="function-structure" class="section level3">
 <h3>Function Structure</h3>
+<p>First, we will introduce the structure of a function.</p>
+<p> </p>
 <p>There are three parts in R function, which are body, formals and environment. Here you can use the function body(   ), formals(   ), environment(   ) to see the different parts in the function.</p>
 <p> </p>
 </div>
@@ -405,7 +407,7 @@ myfunction1(1, 2, b = 3)   # Apply the function written.</code></pre>
 <pre><code>## [1] 1
 ## [1] 3
 ## [1] 2</code></pre>
-<p>R function can also assign the default value by stating the parameter equal to some value directly in the parameter setting bracket. Note that the parameter with default will also be assigned value as ordered. The assignment will not skip the parameter with default.</p>
+<p>R function can also assign the default value by stating the parameter equals to some value directly in the parameter setting bracket. Note that the parameter with default will also be assigned value as ordered. The assignment will not skip the parameter with default.</p>
 <pre class="r"><code>myfunction2 &lt;- function(a, b = 3) { 
   print(a) 
   print(b) 
@@ -419,7 +421,7 @@ myfunction2(1)     # Apply the function written.</code></pre>
 }   # Write the function to determine the missing values.
 myfunc3(b = 1)     # Apply the function written.</code></pre>
 <pre><code>## [1]  TRUE FALSE</code></pre>
-<p>Here we need to mention the … parameter. This parameter could be used to match any unmatched parameter and also easily transfer to any other function. However, this parameter won’t check any correctness.</p>
+<p>Here we need to mention the … parameter. This parameter could be used to match any unmatched parameter and also easily transfer to any other function. However, this parameter won’t check whether it is correct.</p>
 <pre class="r"><code>myfunc4 &lt;- function(...) { names(list(...)) }
 myfunc4(a = 1, b = 2)     # Apply the function written.</code></pre>
 <pre><code>## [1] &quot;a&quot; &quot;b&quot;</code></pre>
@@ -441,7 +443,7 @@ myfunc4(a = 1, b = 2)     # Apply the function written.</code></pre>
 <p> </p>
 <div id="infix-function" class="section level4">
 <h4>Infix function</h4>
-<p>We will usually use a function in the format as “Function” “(Parameter)”. However, there do exist some function put in the middle of two parameter. Here, you need to add the “%” before and after your infix function. Note that you need to use quotation marks to highlight the name of function if you want to use the infix function as the conventional format.</p>
+<p>We will usually use a function in the format as “Function” “(Parameter)”. However, there do exist some functions being put in the middle of two parameter. Here, you need to add the “%” before and after your infix function. Note that you need to use quotation marks to highlight the name of function if you want to use the infix function as the conventional format.</p>
 <pre class="r"><code>&quot;%+%&quot; &lt;- function(a, b) {
   paste(a, b, sep = &quot;&quot;)
 }           # Write a infix function.
@@ -463,7 +465,7 @@ myfunc5(x) &lt;- 10  #Apply the function
 x           # replace the second element of x</code></pre>
 <pre><code>## [1]  1 10  3  4  5</code></pre>
 <p>   </p>
-<p>This is all about this blog. But there is still more that we can explore about writing and applying function in the future.</p>
+<p>This is all about this blog. But there is still more that we can explore about writing and applying function in the future. The examples and usages shown in this blog is all the basic knowledge about how to write a function. We could make the functions more complicated, like putting other functions into it or putting some “for” or “while” loops into functions to accomplish the more complicated work.</p>
 </div>
 </div>
 </div>
